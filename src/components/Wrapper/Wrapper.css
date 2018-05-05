@@ -9,3 +9,6 @@
   align-content: flex-start;
   overflow: auto;
 }
+.wrapper .row {
+  width: 100%;
+}
