@@ -21,10 +21,14 @@ class App extends Component {
   };
 
   handleClick = id => {
-    if (this.state.clicked.indexOf(id) === -1) {
+    if (!this.state.clicked.includes(id)) {
+      
       this.handleIncrement();
-      this.setState({ clicked: this.state.clicked.concat(id) });
+      this.state.clicked.push(id);
+
     } else {
+      alert("Oops - already clicked this one.");
+
       this.handleReset();
     }
   };
@@ -53,7 +57,7 @@ class App extends Component {
       // rightWrong: "Glaven!",
       clicked: []
     });
-    alert("You Lose");
+    // alert("You Lose");
     this.handleShuffle();
   };
 
@@ -75,7 +79,7 @@ class App extends Component {
           />
         </div>
         <div className="row">
-          <h2>Try to click on each character, but don't hit any duplicates!</h2>
+          <h2>Try to click on each character, but don't hit any twice!</h2>
         </div>
         <div className="row">
           {this.state.friends.map(friend => (
