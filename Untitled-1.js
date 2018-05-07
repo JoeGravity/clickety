@@ -14,6 +14,6 @@ module.exports = [{ "id": 1, "image": "http://www.simpsoncrazy.com/content/pictu
 
 //////////////////
 // WEBPACK FOOTER
-// ./src/friends.json
+// ./src/trains.json
 // module id = 40
 // module chunks = 0‰

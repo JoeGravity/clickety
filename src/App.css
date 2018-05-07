@@ -1,5 +1,17 @@
 .title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
+    /* width: 100%; */
+    /* text-align: center; */
+    margin-top: 50px;
+    color: #fff395;
+    font-family: stud, sans-serif;
+
+}
+
+.display-4 {
+    font-family: stud, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff395;
+    margin-top: 20px;
+
 }

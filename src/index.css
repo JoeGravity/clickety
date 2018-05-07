@@ -8,3 +8,15 @@ html, body, #root {
   margin: 0;
   height: 100%;
 }
+
+body {
+  background: rgb(10, 8, 33);
+  background-image: linear-gradient(rgba(10, 8, 50, 0.99), rgba(23, 23, 53, 0.6)),
+  url('https://hdwallsource.com/img/2014/5/train-track-wallpapers-37960-38830-hd-wallpapers.jpg');
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

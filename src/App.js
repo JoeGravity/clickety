@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import TrainCard from "./components/TrainCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
+import trains from "./trains.json";
 import "./App.css";
 
 function scramble(array) {
@@ -11,9 +11,9 @@ function scramble(array) {
 };
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.trains to the trains json array
   state = {
-    friends,
+    trains,
     currentScore: 0,
     // topScore: 0,
     // rightWrong: "",
@@ -62,32 +62,32 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    let shuffled = scramble(friends);
-    this.setState({ friends: shuffled });
+    let shuffled = scramble(trains);
+    this.setState({ trains: shuffled });
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.trains and render a TrainCard component for each train object
   render() {
     return (
       <Wrapper>
         <div className="row">
-          <div className="col-6 col-md-5 bg-primary">
+          <div className="col-12 col-md-8">
             <h1 className="display-4">Clickety Clack Game</h1>
           </div>
           <Title
             score={this.state.currentScore}
           />
         </div>
-        <div className="row">
-          <h2>Try to click on each character, but don't hit any twice!</h2>
+        <div className="row container">
+          <h2 className="text-danger">Try to click on each train, but don't hit any twice!</h2>
         </div>
-        <div className="row">
-          {this.state.friends.map(friend => (
-            <FriendCard
-              // removeFriend={this.removeFriend}
-              id={friend.id}
-              key={friend.id}
-              image={friend.image}
+        <div className="row container">
+          {this.state.trains.map(train => (
+            <TrainCard
+              // removeTrain={this.removeTrain}
+              id={train.id}
+              key={train.id}
+              image={train.image}
               handleClick={this.handleClick}
               handleShuffle={this.handleShuffle}
             />
