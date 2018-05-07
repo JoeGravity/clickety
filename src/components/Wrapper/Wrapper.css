@@ -1,15 +1,15 @@
-.wrapper {
+/* .wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
     padding-bottom: 50px;
-}
+} */
 
 .wrapper .row {
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
 
 }
